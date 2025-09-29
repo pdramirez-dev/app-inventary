@@ -46,6 +46,35 @@ export default function Page() {
           />
         </div>
       </div>
+      <section className="mt-12 grid gap-6 md:grid-cols-3">
+        {[
+          {
+            title: 'Real-time Inventory Tracking',
+            description:
+              'Stay on top of every product movement with automatic quantity updates and smart reorder suggestions.',
+          },
+          {
+            title: 'Actionable Analytics',
+            description:
+              'Discover trends, monitor KPIs, and build custom dashboards to keep your operations running smoothly.',
+          },
+          {
+            title: 'Team Collaboration',
+            description:
+              'Invite teammates, assign roles, and create shared workflows so everyone moves in sync.',
+          },
+        ].map((feature) => (
+          <article
+            key={feature.title}
+            className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-gray-200 transition hover:shadow-md"
+          >
+            <h2 className={`${lusitana.className} text-lg font-semibold text-gray-900`}>
+              {feature.title}
+            </h2>
+            <p className="mt-3 text-sm text-gray-600">{feature.description}</p>
+          </article>
+        ))}
+      </section>
     </main>
   );
 }
